@@ -1,0 +1,1 @@
+A command line interface for MLB statistics. Run the baseball.py script to start.
