@@ -35,11 +35,11 @@ def ScoresCheck(query:list[str]):
     else:
         date = query[0]
     if (date == "today") or (date == "tonight"):
-        date = datetime.now().date
+        date = str(datetime.now())
     elif date == "yesterday":
-        date = datetime.now().date - timedelta(days=1)
+        date = str(datetime.now() - timedelta(days=1))
     elif date == "tomorrow":
-        date = datetime.now().date + timedelta(days=1)
+        date = str(datetime.now() + timedelta(days=1))
     else:
         if len(date) == 5:
             date = str(datetime.now().year) + "-" + date
@@ -78,7 +78,3 @@ tableDict = {
         'str': '{:<2}',
     },
 }
-
-# if __name__ == "__main__":
-#     # Schedule("2025-06-17")
-#     Scores("2026-03-27")
